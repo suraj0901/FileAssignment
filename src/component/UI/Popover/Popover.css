@@ -1,0 +1,53 @@
+.popover {
+  top: 0;
+  left: 0;
+  transform: translate(-83%, -110%);
+  position: absolute;
+  max-width: 420px;
+  width: fit-content;
+  min-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(58, 58, 68, 0.16),
+    0px 8px 16px rgba(90, 91, 106, 0.16);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.popover::before {
+  content: "";
+  position: absolute;
+  bottom: -9px; /* Position it below the popover */
+  left: 90%; /* Center it horizontally */
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 1); /* Adjust the color of the arrow */
+  z-index: 1; /* Place it above the popover */
+}
+.table_row_delete_button {
+  position: relative;
+}
+.popover_header {
+  padding: 0.5rem 1rem;
+  background-color: #0001;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.popover_body {
+  padding: 0.5rem 1rem;
+}
+.popover_cancel_button {
+  color: red;
+  padding: 4px;
+}
+
+.popover_submit_button {
+  color: green;
+}
+
+.delete_popver {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
