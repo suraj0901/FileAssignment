@@ -8,9 +8,11 @@ import { useState } from "react";
 
 function App() {
   const [search, setSearch] = useState("");
+
   return (
     <section className="root">
       <Toaster position="top-center" />
+
       <SideBar />
       <main className="flex-1">
         <Header />

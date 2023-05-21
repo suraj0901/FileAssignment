@@ -5,11 +5,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #814ee7;
+  --secondary-color: #a9b5da;
+}
 body {
   font-family: "Nunito Sans", sans-serif;
   color: rgba(64, 73, 101, 1);
   background-color: #eef3fa;
 }
+
 .root {
   display: flex;
 }
@@ -98,7 +103,7 @@ input[type="checkbox"] {
   height: 1rem;
   border: 2px solid rgba(169, 181, 218, 1);
   background-color: rgba(255, 255, 255, 1);
-  accent-color: #814ee7;
+  accent-color: var(--primary-color);
 }
 
 .file_name {
@@ -218,7 +223,7 @@ input[type="checkbox"] {
   margin-bottom: 1rem;
   align-self: flex-end;
   background-color: #fafafa;
-  border: 1px solid #a9b5da;
+  border: 1px solid var(--secondary-color);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -236,4 +241,78 @@ input[type="checkbox"] {
   background-color: #fafafa;
   outline: none;
   border: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.modal_body {
+  padding: 1rem;
+}
+.modal_header {
+  padding: 1rem;
+  background-color: #0001;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.updateFile {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 480px;
+}
+.updateFile > section {
+  display: flex;
+  align-items: center;
+}
+
+.updateFile > section > label {
+  flex: 1;
+}
+.updateFile > section > input {
+  flex: 6;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary-color);
+  outline-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+.updateFile > section.buttongrp {
+  justify-content: end;
+  display: flex;
+  gap: 8px;
+}
+
+.updateFile > section > button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.updateFile > section > button.submit,
+.updateFile > section > button.cancel:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.updateFile > section > button.cancel {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
